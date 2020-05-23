@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // We want 1rem = 10px but default is 16px so 10/16=0.625;
+}
+
+body {
+    padding: 1rem;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}

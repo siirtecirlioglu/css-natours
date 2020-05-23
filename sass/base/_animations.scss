@@ -1,0 +1,46 @@
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20rem);
+    }
+
+    80% {
+        opacity: 0.9;
+        transform: translateX(2rem);
+        letter-spacing: 3rem;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20rem);
+    }
+
+    80% {
+        opacity: 0.9;
+        transform: translateX(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem); // Because y is getting larger from top to bottom (like smth at top would be 5 and then smth at bottom would be 25 etc.)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
