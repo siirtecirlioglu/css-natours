@@ -3,15 +3,35 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 html {
     font-size: 62.5%; // We want 1rem = 10px but default is 16px so 10/16=0.625;
+
+    // If width < 1200px, 1rem = 9px so 9/16 = 0.5625
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    // If width < 900px, 1rem = 8px so 8/16 = 0.50
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    // If width > 1200px, 1rem = 12px so 12/16 = 0.75
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
 }
 
 body {
     padding: 1rem;
+    box-sizing: border-box;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
 }
 
 ::selection {
